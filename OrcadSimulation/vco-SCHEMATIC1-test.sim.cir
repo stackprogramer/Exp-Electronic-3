@@ -1,0 +1,17 @@
+** Profile: "SCHEMATIC1-test"  [ G:\Azelec3\Orcadfiles\vco-schematic1-test.sim ] 
+
+** Creating circuit file "vco-schematic1-test.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of F:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 100ns 0 .00001 SKIPBP 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\vco-SCHEMATIC1.net" 
+
+
+.END

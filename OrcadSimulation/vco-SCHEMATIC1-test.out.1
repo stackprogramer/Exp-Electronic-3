@@ -1,0 +1,57 @@
+
+**** 07/21/15 21:40:36 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test"  [ F:\USERS\ROOT\DOCUMENTS\ORCAD\finalvco\vco-SCHEMATIC1-test.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "vco-SCHEMATIC1-test.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of F:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1s 0 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\vco-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING vco-SCHEMATIC1.net ****
+* source VCO
+Q_Q1         N00434 N00884 N00405 Q2N3904
+R_R6         0 N01207  47k  
+C_C1         N00405 N00434  10p  
+C_C2         N00434 N00729  30  
+C_C4         N01153 N01126  47u  
+C_C3         N00434 N00729  33p  
+C_C5         N01207 N01180  47u  
+L_L1         N00434 N00729  10H  
+C_C6         0 N01153  1n  
+V_V1         N00729 0 9Vdc
+C_C9         0 N00729  47u  
+C_C7         0 N01207  1n  
+R_R1         N00884 N00729  39k  
+C_C8         0 N00729  1n  
+R_R2         0 N00405  100  
+R_R3         N01126 N00884  22k  
+V_V2         0 0 DC 0Vdc AC 0Vac 
+R_R4         0 N01153  47k  
+C_C10         0 N00884  1n  
+R_R5         N01180 N00884  22k  
+
+**** RESUMING vco-SCHEMATIC1-test.sim.cir ****
+.END
+
+ERROR -- Voltage source and/or inductor loop involving V_V2
+You may break the loop by adding a series resistance
